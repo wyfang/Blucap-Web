@@ -1,0 +1,318 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover"><link rel="icon" href="favicon.ico"><title>Blucap</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><style>/*清除默认样式*/
+        /* 取消选中复制 */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        dl,
+        dd,
+        ol,
+        ul,
+        li,
+        th,
+        td,
+        form,
+        fieldset,
+        input,
+        button,
+        textarea,
+        div {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            -webkit-text-size-adjust: none;
+            word-wrap: break-word;
+        }
+
+        head,
+        body {
+            background-color: black;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-size: 100%;
+        }
+
+        ol,
+        ul {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            empty-cells: show;
+            font-size: inherit;
+        }
+
+        fieldset,
+        img {
+            border: 0;
+        }
+
+        cite,
+        em,
+        s,
+        i,
+        b {
+            font-style: normal;
+        }
+
+        input,
+        button,
+        textarea,
+        select {
+            font-size: 100%;
+            border: none;
+            outline: none;
+        }
+
+        body,
+        input,
+        button,
+        textarea,
+        select,
+        option {
+            font-size: normal;
+        }
+
+        input,
+        textarea {
+            text-decoration: none;
+            outline: 0;
+        }
+
+        input[type=button],
+        input[type=submit],
+        input[type=file],
+        button {
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+
+        li,
+        img,
+        label,
+        input {
+            vertical-align: middle;
+        }
+
+        var {
+            font-style: normal;
+        }
+
+        ins {
+            text-decoration: none;
+        }
+
+        body {
+            height: 100%;
+            font-size: 0.24rem;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /*文字布局*/
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        /*文本溢出出现省略号*/
+
+        .over {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /*clear清除浮动和防止margin-top向上传递*/
+
+        .clear {
+            zoom: 1;
+            /*只有ie能识别*/
+        }
+
+        .clear:before {
+            content: "";
+            display: table;
+        }
+
+        .clear:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /*flex布局  */
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .flex-grow {
+            flex-grow: 1;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .flex-flow {
+            flex-flow: row wrap;
+        }
+
+        /*flex-direction*/
+
+        .row {
+            flex-direction: row;
+        }
+
+        .column {
+            flex-direction: column;
+            /*纵向排列*/
+        }
+
+        /*justify-content 主轴横向对齐  <=================================================================================>*/
+
+        .row-start {
+            justify-content: flex-start;
+            /*左对齐*/
+        }
+
+        .row-center {
+            justify-content: center;
+            /*居中对齐*/
+        }
+
+        .row-between {
+            justify-content: space-between;
+            /*分开对齐,之间的间隔都相等*/
+        }
+
+        .row-around {
+            justify-content: space-around;
+            /*分开左右对齐*/
+        }
+
+        .row-end {
+            justify-content: flex-end;
+            /*右对齐*/
+        }
+
+        /*align-content 主轴纵向对齐  <=================================================================================>*/
+
+        .column-start {
+            align-content: flex-start;
+            /*上对齐(交叉轴的起点对齐)*/
+        }
+
+        .column-end {
+            align-content: flex-end;
+            /*下对齐(交叉轴的终点对齐)*/
+        }
+
+        .column-center {
+            align-content: center;
+            /*居中对齐(交叉轴的中点对齐)*/
+        }
+
+        .column-between {
+            align-content: space-between;
+            /*分开对齐(与交叉轴两端对齐，轴线之间的间隔平均分布)*/
+        }
+
+        .column-around {
+            align-content: space-around;
+            /*分开左右边距对齐(每根轴线两侧的间隔都相等所以，轴线之间的间隔比轴线与边框的间隔大一倍)*/
+        }
+
+        .column-stretch {
+            align-content: stretch;
+            /*上下拉升对齐(如果项目未设置高度或设为auto，将占满整个容器的高度)*/
+        }
+
+        /*align-items 侧轴对齐  <=================================================================================>*/
+
+        .items-start {
+            align-items: flex-start;
+            /*上对齐(交叉轴的起点对齐)*/
+        }
+
+        .items-end {
+            align-items: flex-end;
+            /*下对齐(交叉轴的终点对齐)*/
+        }
+
+        .items-center {
+            align-items: center;
+            /*居中对齐(交叉轴的中点对齐)*/
+        }
+
+        .items-baseline {
+            align-items: baseline;
+            /*基线对齐( 项目的第一行文字的基线对齐)*/
+        }
+
+        .items-stretch {
+            align-items: stretch;
+            /*上下拉升对齐(如果项目未设置高度或设为auto，将占满整个容器的高度)*/
+        }
+
+        /* 上下左右居中 */
+        .flex-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        input::-webkit-input-placeholder {
+            color: rgba(181, 184, 193, 1);
+        }
+
+        /* 隐藏滚动条 */
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            color: transparent;
+        }
+
+        * {
+            /* -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -khtml-user-select: none;
+      user-select: none; */
+            /* font-family: Arial, Helvetica, sans-serif; */
+            /* font-family: 'League Spartan', sans-serif; */
+        }</style><link href="css/chunk-0d234088.94391ee8.css" rel="prefetch"><link href="css/chunk-100f2aaf.7e32825a.css" rel="prefetch"><link href="css/chunk-48b3e52a.5b07b796.css" rel="prefetch"><link href="css/chunk-53b97f42.fa49669c.css" rel="prefetch"><link href="css/chunk-702308dc.b456f053.css" rel="prefetch"><link href="css/chunk-ad742c3c.1662a949.css" rel="prefetch"><link href="js/chunk-0d234088.0b0f3398.js" rel="prefetch"><link href="js/chunk-100f2aaf.4ff87e97.js" rel="prefetch"><link href="js/chunk-48b3e52a.8e6bf8a1.js" rel="prefetch"><link href="js/chunk-53b97f42.4471e411.js" rel="prefetch"><link href="js/chunk-702308dc.d1edf118.js" rel="prefetch"><link href="js/chunk-ad742c3c.64fe692e.js" rel="prefetch"><link href="css/app.e1dacefc.css" rel="preload" as="style"><link href="css/chunk-vendors.57b0f133.css" rel="preload" as="style"><link href="js/app.1bd34fcf.js" rel="preload" as="script"><link href="js/chunk-vendors.a63ad0ff.js" rel="preload" as="script"><link href="css/chunk-vendors.57b0f133.css" rel="stylesheet"><link href="css/app.e1dacefc.css" rel="stylesheet"></head><body><div id="app"></div><script>//设置rem自适应
+        var rem = document.documentElement.clientWidth / 3.75;
+        document.getElementsByTagName('html')[0].style.fontSize = rem + 'px';
+        addEventListener('resize', function () {
+            var rem = document.documentElement.clientWidth / 3.75;
+            document.getElementsByTagName('html')[0].style.fontSize = rem + 'px';
+        }, false);</script><script src="js/chunk-vendors.a63ad0ff.js"></script><script src="js/app.1bd34fcf.js"></script></body></html>
